@@ -1,4 +1,4 @@
-import flask
+from flask import Flask
 import os
 app = Flask('app', static_url_path="")
 @app.route('/', methods=["GET","POST"])
