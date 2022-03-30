@@ -1,11 +1,12 @@
 from flask import Flask, request
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import requests
 
-app = Flask('app', static_url_path="")
+app = Flask('app')
 CORS(app)
 
 @app.route('/', methods=["GET","POST"])
+@cross_origin()
 def index():
   if request.method == 'POST':
     url = "https://www.google.com/search?q=SEARCH+URL+HERE&hl=en-us&source=lnms&tbm=vid"
