@@ -1,7 +1,9 @@
 from flask import Flask, request
+from flask_cors import CORS
 import requests
 
 app = Flask('app', static_url_path="")
+CORS(app)
 
 @app.route('/', methods=["GET","POST"])
 def index():
