@@ -5,3 +5,4 @@ click
 Jinja2
 flask
 gunicorn
+requests
